@@ -1,0 +1,33 @@
+@page {
+  size: A4;
+  margin: 2cm;
+}
+
+@media print {
+  body {
+    margin: 0;
+    margin-left: 2cm !important;
+    font-size: 12pt;
+  }
+
+  .column.is-full {
+    width: 100% !important;
+  }
+}
+
+.square-image-container {
+  position: relative;
+  width: 200px;
+}
+
+.square-image {
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  position: relative;
+  padding-top: 100%;
+}
+
+.has-background-custom-grey {
+  background-color: #f8f9fa; 
+}

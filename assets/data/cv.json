@@ -1,0 +1,70 @@
+{
+  "about": "As a software manager and software architect with over 15 years of experience in the software industry, I have led development teams to create innovative and efficient solutions, improve user experience, and solve business challenges. As a software architect, I have built high-quality solutions that have generated excellent results for my clients and employers. I possess skills in project management, team leadership, and process improvement. I am committed to continuing to learn and grow in my career, and I am passionate about working in challenging and constantly changing environments.",
+  "experiences": [
+    {
+      "age": "Nov 2021 - present",
+      "title": "Regional Software Development Manager",
+      "company": "invertirOnline.com",
+      "description": "Plataforma productores React+Websocket+Events - Broker regional Alpaca Markets"
+    },
+    {
+      "age": "Nov 2019 - Oct 2021",
+      "title": "Investment Tribe Development Lead",
+      "company": "invertirOnline.com",
+      "description": "Market data WebSocket Viewtrade - Productos a través de Microservicios"
+    },
+    {
+      "age": "Nov 2017 - Oct 2019",
+      "title": "Software Development Team Lead",
+      "company": "invertirOnline.com",
+      "description": "Market data y Order Router fix ByMA - Order Router fix Viewtrade - Onbording digital - API para clientes"
+    },
+    {
+      "age": "Jun 2013 - Oct 2017",
+      "title": "Senior .net Developer",
+      "company": "invertirOnline.com",
+      "description": "Sitio web ASP.NET mvc - .net Aplications"
+    },
+    {
+      "age": "Mar 2012 - May 2013",
+      "title": "Senior .net Developer & Tech Lead",
+      "company": "Dirección de Informática del Ministerio de Economía de la Provincia de Tucumán",
+      "description": ""
+    },
+    {
+      "age": "Jul 2007 - Feb 2012",
+      "title": "Senior .net Developer",
+      "company": "Ministerio de Educación de la Provincia de Tucumán",
+      "description": ""
+    }
+  ],
+  "education": [
+    {
+      "age": "Mar 2018 - Feb 2005",
+      "degree": "Information Systems Engineer",
+      "institution": "Universidad Tecnológica Nacional"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "proficiency": "Professional working proficiency"
+    },
+    {
+      "language": "Spanish",
+      "proficiency": "Native or bilingual proficiency"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Fundamentals Online Workshop",
+      "issuing_organization": "Management 3.0",
+      "issue_date": "Apr 2021"
+    },
+    {
+      "name": "Certified ScrumMaster (CSM)",
+      "issuing_organization": "Scrum Alliance",
+      "issue_date": "Aug 2014"
+    }
+  ]
+}
