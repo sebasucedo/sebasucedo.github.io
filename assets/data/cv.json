@@ -47,7 +47,7 @@
       "age": "Jun 2013 - Oct 2017",
       "title": "Senior .net Developer",
       "company": "invertirOnline.com",
-      "description": "Sitio web ASP.NET mvc - .net Aplications"
+      "description": "Sitio web ASP.NET mvc - .net Applications"
     },
     {
       "age": "Mar 2012 - May 2013",
@@ -56,10 +56,16 @@
       "description": ""
     },
     {
+      "age": "Nov 2010 - Feb 2013",
+      "title": "Senior .net Developer",
+      "company": "Argencoders",
+      "description": ".net Applications"
+    },
+    {
       "age": "Jul 2007 - Feb 2012",
       "title": "Senior .net Developer",
       "company": "Ministerio de Educación de la Provincia de Tucumán",
-      "description": ""
+      "description": "ASP.NET Webforms - ASP.NET mvc"
     }
   ],
   "education": [

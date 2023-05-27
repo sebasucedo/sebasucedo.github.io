@@ -1,11 +1,17 @@
 window.onbeforeprint = function() {
-  var element = document.getElementById("basicInfo");
-  element.classList.remove("is-three-quarters");
-  element.classList.add("is-full");
+  var basicInfo = document.getElementById("basicInfo");
+  basicInfo.classList.remove("is-three-quarters");
+  basicInfo.classList.add("is-full");
+
+  var profile = document.getElementById("profilePicture")
+  profile.style.display = 'none';
 };
 
 window.onafterprint = function() {
-  var element = document.getElementById("basicInfo");
-  element.classList.remove("is-full");
-  element.classList.add("is-three-quarters");
+  var basicInfo = document.getElementById("basicInfo");
+  basicInfo.classList.remove("is-full");
+  basicInfo.classList.add("is-three-quarters");
+
+  var profile = document.getElementById("profilePicture")
+  profile.style.display = 'block';
 };
