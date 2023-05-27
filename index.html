@@ -12,38 +12,39 @@
   </head>
   <body>
   <section class="section">
-    <div class="container is-max-desktop">
+    <div class="container is-max-desktop"
+        x-cloak
+              x-data="{ basicInfo: [], about: '', experiences: [], education: [], languages: [], certifications: [], 'isLoading': true}"
+              x-init="fetch('/assets/data/cv.json')
+                      .then(response => response.json())
+                      .then(response => {
+                          basicInfo = response.info;
+                          about = response.about;
+                          experiences = response.experiences;
+                          education = response.education; 
+                          languages = response.languages;
+                          certifications = response.certifications;
+                          isLoading = false; 
+
+                          console.log(basicInfo);
+                          console.log(experiences);
+                        })"
+      >
         <div class="columns">
-          <div id="myElement" class="column is-three-quarters">
+          <div id="basicInfo" class="column is-three-quarters">
             <h1 class="title is-1 m-0">
               Octavio Sebastián Ucedo
             </h1>
             <h2 class="title is-4">Software Development Manager - Software Architect</h2>
             <ul>
-              <li>
-                <a href="mailto:sebasucedo@gmail.com" target="_blank">
-                  <i class="fas fa-at"></i>
-                  sebasucedo@gmail.com
-                </a>
-              </li>
-              <li>
-                <a href="tel:+543814636112" target="_blank">
-                  <i class="fas fa-mobile-alt"></i>
-                  +54 (381)4636112
-                </a>
-              </li>
-              <li>
-                <a href="https://www.google.com/maps/place/San+Miguel+de+Tucum%C3%A1n,+Tucum%C3%A1n/@-26.8328589,-65.2225936,12z/data=!3m1!4b1!4m6!3m5!1s0x94223792d6c56903:0xf88d5b92b5c56527!8m2!3d-26.8082848!4d-65.2175903!16zL20vMDJmNWpi" target="_blank">
-                  <i class="fas fa-map-marker-alt"></i>
-                  Tucumán, Argentina
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/sebasucedo/" target="_blank">
-                  <i class="fab fa-linkedin"></i>
-                  sebasucedo
-                </a>
-              </li>
+              <template x-for="info in basicInfo">
+                <li>
+                  <a :href="info.href" target="_blank">
+                    <i :class="info.class"></i>
+                    <span x-text="info.title"></span>
+                  </a>
+                </li>
+              </template>
             </ul>
           </div>
           <div class="column">
@@ -52,18 +53,7 @@
             </div>
           </div>
         </div>
-      <div x-cloak
-           x-data="{ about: '', experiences: [], education: [], languages: [], certifications: [], 'isLoading': true}"
-           x-init="fetch('/assets/data/cv.json')
-                   .then(response => response.json())
-                   .then(response => {
-                      about = response.about;
-                      experiences = response.experiences;
-                      education = response.education; 
-                      languages = response.languages;
-                      certifications = response.certifications;
-                      isLoading = false; 
-                    })">
+      <div>
         <div class="columns">
           <div class="column is-full">
             <h2 class="title is-4">About</h2>

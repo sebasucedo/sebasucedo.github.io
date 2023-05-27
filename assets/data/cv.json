@@ -1,4 +1,26 @@
 {
+  "info": [
+    {
+      "href": "mailto:sebasucedo@gmail.com",
+      "class": "fas fa-at",
+      "title": "sebasucedo@gmail.com"
+    },
+    {
+      "href": "tel:+543814636112",
+      "class": "fas fa-mobile-alt",
+      "title": "+54 (381)4636112"
+    },
+    {
+      "href": "https://www.google.com/maps/place/San+Miguel+de+Tucum%C3%A1n,+Tucum%C3%A1n/@-26.8328589,-65.2225936,12z/data=!3m1!4b1!4m6!3m5!1s0x94223792d6c56903:0xf88d5b92b5c56527!8m2!3d-26.8082848!4d-65.2175903!16zL20vMDJmNWpi",
+      "class": "fas fa-map-marker-alt",
+      "title": "Tucumán, Argentina"
+    },
+    {
+      "href": "https://www.linkedin.com/in/sebasucedo/",
+      "class": "fab fa-linkedin",
+      "title": "sebasucedo"
+    }
+  ],
   "about": "As a software manager and software architect with over 15 years of experience in the software industry, I have led development teams to create innovative and efficient solutions, improve user experience, and solve business challenges. As a software architect, I have built high-quality solutions that have generated excellent results for my clients and employers. I possess skills in project management, team leadership, and process improvement. I am committed to continuing to learn and grow in my career, and I am passionate about working in challenging and constantly changing environments.",
   "experiences": [
     {
@@ -17,7 +39,7 @@
       "age": "Nov 2017 - Oct 2019",
       "title": "Software Development Team Lead",
       "company": "invertirOnline.com",
-      "description": "Market data y Order Router fix ByMA - Order Router fix Viewtrade - Onbording digital - API para clientes"
+      "description": "Market data + Order Router fix ByMA - Order Router fix Viewtrade - Onbording digital - API para clientes"
     },
     {
       "age": "Jun 2013 - Oct 2017",
