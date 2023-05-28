@@ -21,92 +21,90 @@
                       data = response;
                       isLoading = false; 
                    })">
-          <div class="columns">
-            <div id="basicInfo" class="column is-three-quarters">
-              <h1 class="title is-1 m-0" x-text="data.name"></h1>
-              <h2 class="title is-4" x-text="data.headline"></h2>
-              <ul>
-                <template x-for="info in data.info">
-                  <li>
-                    <a :href="info.href" target="_blank">
-                      <i :class="info.class"></i>
-                      <span x-text="info.title"></span>
-                    </a>
-                  </li>
-                </template>
-              </ul>
-            </div>
-            <div id="profilePicture" class="column">
-              <div class="square-image-container is-pulled-right">
-                <div class="square-image" style="background-image: url('assets/images/profile_web.jpg');"></div>
-              </div>
+        <div class="columns">
+          <div id="basicInfo" class="column is-three-quarters">
+            <h1 class="title is-2 m-0" x-text="data.name"></h1>
+            <h2 class="title is-5" x-text="data.headline"></h2>
+            <ul>
+              <template x-for="info in data.info">
+                <li>
+                  <a :href="info.href" target="_blank">
+                    <i :class="info.class"></i>
+                    <span x-text="info.title"></span>
+                  </a>
+                </li>
+              </template>
+            </ul>
+          </div>
+          <div id="profilePicture" class="column is-one-quarter">
+            <div class="square-image-container">
+              <div class="square-image" style="background-image: url('assets/images/profile_web.jpg');"></div>
             </div>
           </div>
-        <div>
-          <div class="columns">
-            <div class="column is-full">
-              <h2 class="title is-4">About</h2>
-              <p class="has-text-justified" x-text="data.about"></p>
-            </div>
+        </div>                   
+        <div class="columns">
+          <div class="column is-full">
+            <h2 class="title is-4">About</h2>
+            <p class="has-text-justified" x-text="data.about"></p>
           </div>
-          <div class="columns">
-            <div class="column is-three-fifths">
-              <h2 class="title is-4">Experience</h2>
+        </div>
+        <div class="columns">
+          <div class="column is-three-fifths">
+            <h2 class="title is-4">Experience</h2>
+            <ul>
+              <template x-for="experience in data.experiences" :key="experience.age">
+                <li class="mb-3">
+                  <div>
+                    <h5 class="title is-5 mb-1" x-text="experience.title"></h5>
+                    <p x-text="experience.company"></p>
+                    <p x-text="experience.age"></p>
+                    <p x-text="experience.description"></p>
+                  </div>
+                </li>
+              </template>
+            </ul>
+          </div>
+          <div class="column has-background-custom-grey">
+            <div class="mb-6">
+              <h2 class="title is-4">Education</h2>
               <ul>
-                <template x-for="experience in data.experiences" :key="experience.age">
+                <template x-for="item in data.education" :key="item.age">
                   <li class="mb-3">
                     <div>
-                      <h5 class="title is-5 mb-1" x-text="experience.title"></h5>
-                      <p x-text="experience.company"></p>
-                      <p x-text="experience.age"></p>
-                      <p x-text="experience.description"></p>
+                      <h5 class="title is-5 mb-1" x-text="item.degree"></h5>
+                      <p x-text="item.institution"></p>
+                      <p x-text="item.age"></p>
                     </div>
                   </li>
                 </template>
               </ul>
             </div>
-            <div class="column has-background-custom-grey">
-              <div class="mb-6">
-                <h2 class="title is-4">Education</h2>
-                <ul>
-                  <template x-for="item in data.education" :key="item.age">
-                    <li class="mb-3">
-                      <div>
-                        <h5 class="title is-5 mb-1" x-text="item.degree"></h5>
-                        <p x-text="item.institution"></p>
-                        <p x-text="item.age"></p>
-                      </div>
-                    </li>
-                  </template>
-                </ul>
-              </div>
-              <div class="mb-6">
-                <h2 class="title is-4">Languages</h2>
-                <ul>
-                  <template x-for="language in data.languages">
-                    <li class="mb-3">
-                      <div>
-                        <h5 class="title is-5 mb-1" x-text="language.language"></h5>
-                        <p x-text="language.proficiency"></p>
-                      </div>
-                    </li>
-                  </template>
-                </ul>
-              </div>
-              <div class="mb-6">
-                <h2 class="title is-4">Certifications</h2>
-                <ul>
-                  <template x-for="certification in data.certifications">
-                    <li class="mb-3">
-                      <div>
-                        <h5 class="title is-5 mb-1" x-text="certification.name"></h5>
-                        <p x-text="certification.issuing_organization"></p>
-                        <p x-text="certification.issue_date"></p>
-                      </div>
-                    </li>
-                  </template>
-                </ul>
-              </div>
+            <div class="mb-6">
+              <h2 class="title is-4">Languages</h2>
+              <ul>
+                <template x-for="language in data.languages">
+                  <li class="mb-3">
+                    <div>
+                      <h5 class="title is-5 mb-1" x-text="language.language"></h5>
+                      <p x-text="language.proficiency"></p>
+                    </div>
+                  </li>
+                </template>
+              </ul>
+            </div>
+            <div class="mb-6">
+              <h2 class="title is-4">Certifications</h2>
+              <ul>
+                <template x-for="certification in data.certifications">
+                  <li class="mb-3">
+                    <div>
+                      <h5 class="title is-5 mb-1" x-text="certification.name"></h5>
+                      <p x-text="certification.issuing_organization"></p>
+                      <p x-text="certification.issue_date"></p>
+                    </div>
+                  </li>
+                </template>
+              </ul>
             </div>
           </div>
         </div>
