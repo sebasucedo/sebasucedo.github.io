@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="/assets/images/book-open-solid.svg">
+    <link rel="icon" href="https://cdn.ucedo.io/cv/profile_web.ico">
     <title>Octavio Sebastian Ucedo - Software Development Manager / Software Architect</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"><link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script src="js/script.js"></script>
   </head>
@@ -15,14 +16,17 @@
       <div class="container is-max-desktop"
            x-cloak
            x-data="{ data: {}, 'isLoading': true }"
-           x-init="fetch('/assets/data/cv.json')
+           x-init="fetch('https://cdn.ucedo.io/cv/cv.json', { 
+                      method: 'GET',
+                      mode: 'cors'
+                   })
                    .then(response => response.json())
                    .then(response => {
                       data = response;
                       isLoading = false; 
                    })">
         <div class="columns">
-          <div id="basicInfo" class="column is-three-quarters">
+          <div id="basicInfo" class="column is-two-thirds">
             <h1 class="title is-2 m-0" x-text="data.name"></h1>
             <h2 class="title is-5" x-text="data.headline"></h2>
             <ul>
@@ -36,9 +40,9 @@
               </template>
             </ul>
           </div>
-          <div id="profilePicture" class="column is-one-quarter">
+          <div id="profilePicture" class="column is-one-third">
             <div class="square-image-container">
-              <div class="square-image" style="background-image: url('assets/images/profile_web.jpg');"></div>
+              <div class="square-image" style="background-image: url('https://cdn.ucedo.io/cv/profile_web.png');"></div>
             </div>
           </div>
         </div>                   
@@ -49,7 +53,7 @@
           </div>
         </div>
         <div class="columns">
-          <div class="column is-three-fifths">
+          <div class="column is-two-thirds">
             <h2 class="title is-4">Experience</h2>
             <ul>
               <template x-for="experience in data.experiences" :key="experience.age">
