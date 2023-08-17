@@ -9,108 +9,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-    <script src="../js/script.js"></script>
   </head>
   <body>
     <section class="section">
-      <div class="container is-max-desktop"
-           x-cloak
-           x-data="{ data: {}, 'isLoading': true }"
-           x-init="fetch('https://cdn.ucedo.io/cv/cv.json', { 
-                      method: 'GET',
-                      mode: 'cors'
-                   })
-                   .then(response => response.json())
-                   .then(response => {
-                      data = response;
-                      isLoading = false; 
-                   })">
-        <div class="columns">
-          <div id="basicInfo" class="column is-two-thirds">
-            <h1 class="title is-2 m-0" x-text="data.name"></h1>
-            <h2 class="title is-5" x-text="data.headline"></h2>
-            <ul>
-              <template x-for="info in data.info">
-                <li>
-                  <a :href="info.href" target="_blank">
-                    <i :class="info.class"></i>
-                    <span x-text="info.title"></span>
-                  </a>
-                </li>
-              </template>
-            </ul>
-          </div>
-          <div id="profilePicture" class="column is-one-third">
-            <div class="square-image-container">
-              <div class="square-image" style="background-image: url('https://cdn.ucedo.io/cv/profile_web.png');"></div>
-            </div>
-          </div>
-        </div>                   
-        <div class="columns">
-          <div class="column is-full">
-            <h2 class="title is-4">About</h2>
-            <p class="has-text-justified" x-text="data.about"></p>
-          </div>
-        </div>
-        <div class="columns">
-          <div class="column is-two-thirds">
-            <h2 class="title is-4">Experience</h2>
-            <ul>
-              <template x-for="experience in data.experiences" :key="experience.age">
-                <li class="mb-3">
-                  <div>
-                    <h5 class="title is-5 mb-1" x-text="experience.title"></h5>
-                    <p x-text="experience.company"></p>
-                    <p x-text="experience.age"></p>
-                    <p x-text="experience.description"></p>
-                  </div>
-                </li>
-              </template>
-            </ul>
-          </div>
-          <div class="column has-background-custom-grey">
-            <div class="mb-6">
-              <h2 class="title is-4">Education</h2>
-              <ul>
-                <template x-for="item in data.education" :key="item.age">
-                  <li class="mb-3">
-                    <div>
-                      <h5 class="title is-5 mb-1" x-text="item.degree"></h5>
-                      <p x-text="item.institution"></p>
-                      <p x-text="item.age"></p>
-                    </div>
-                  </li>
-                </template>
-              </ul>
-            </div>
-            <div class="mb-6">
-              <h2 class="title is-4">Languages</h2>
-              <ul>
-                <template x-for="language in data.languages">
-                  <li class="mb-3">
-                    <div>
-                      <h5 class="title is-5 mb-1" x-text="language.name"></h5>
-                      <p x-text="language.proficiency"></p>
-                    </div>
-                  </li>
-                </template>
-              </ul>
-            </div>
-            <div class="mb-6">
-              <h2 class="title is-4">Certifications</h2>
-              <ul>
-                <template x-for="certification in data.certifications">
-                  <li class="mb-3">
-                    <div>
-                      <h5 class="title is-5 mb-1" x-text="certification.name"></h5>
-                      <p x-text="certification.issuing_organization"></p>
-                      <p x-text="certification.issue_date"></p>
-                    </div>
-                  </li>
-                </template>
-              </ul>
-            </div>
-          </div>
+      <div class="container-center">
+        <div class="content">
+          <p class="has-text-justified">I have amazing skills</p>
         </div>
       </div>
     </section>

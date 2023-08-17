@@ -31,3 +31,10 @@
 .has-background-custom-grey {
   background-color: #f8f9fa; 
 }
+
+.container-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
