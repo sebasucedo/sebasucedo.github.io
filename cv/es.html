@@ -13,7 +13,8 @@
   </head>
   <body>
     <section class="section">
-      <div class="container is-max-desktop"
+      <div id="main"
+           class="container is-max-desktop"
            x-cloak
            x-data="{ data: {}, 'isLoading': true }"
            x-init="fetch('https://cdn.ucedo.io/cv/cv-es.json', { 
@@ -29,7 +30,7 @@
           <div id="basicInfo" class="column is-two-thirds">
             <h1 class="title is-2 m-0" x-text="data.name"></h1>
             <h2 class="title is-5" x-text="data.headline"></h2>
-            <ul>
+            <ul class="container-flex">
               <template x-for="info in data.info">
                 <li>
                   <a :href="info.href" target="_blank">
@@ -40,7 +41,7 @@
               </template>
             </ul>
           </div>
-          <div id="profilePicture" class="column is-one-third">
+          <div id="profilePicture" class="column is-one-third non-printable">
             <div class="square-image-container">
               <div class="square-image" style="background-image: url('https://cdn.ucedo.io/cv/profile_web.png');"></div>
             </div>
@@ -53,23 +54,26 @@
           </div>
         </div>
         <div class="columns">
-          <div class="column is-two-thirds">
+          <div id="experience" class="column is-two-thirds">
             <h2 class="title is-4">Experiencia</h2>
             <ul>
               <template x-for="experience in data.experiences" :key="experience.age">
                 <li class="mb-3">
                   <div>
                     <h5 class="title is-5 mb-1" x-text="experience.title"></h5>
-                    <p x-text="experience.company"></p>
-                    <p x-text="experience.age"></p>
-                    <p x-text="experience.description"></p>
+                    <div class="container-flex">
+                      <p x-text="experience.company"></p>
+                      <p x-text="experience.age"></p>
+                    </div>
+                    <p class="has-text-justified" x-text="experience.description"></p>
                   </div>
                 </li>
               </template>
             </ul>
           </div>
-          <div class="column has-background-custom-grey">
-            <div class="mb-6">
+          <div id="grey" class="column has-background-custom-grey">
+
+            <div class="column mb-6">
               <h2 class="title is-4">Educación</h2>
               <ul>
                 <template x-for="item in data.education" :key="item.age">
@@ -83,7 +87,8 @@
                 </template>
               </ul>
             </div>
-            <div class="mb-6">
+
+            <div class="column mb-6">
               <h2 class="title is-4">Idiomas</h2>
               <ul>
                 <template x-for="language in data.languages">
@@ -96,7 +101,8 @@
                 </template>
               </ul>
             </div>
-            <div class="mb-6">
+
+            <div class="column mb-6">
               <h2 class="title is-4">Certificaciones</h2>
               <ul>
                 <template x-for="certification in data.certifications">
@@ -110,6 +116,7 @@
                 </template>
               </ul>
             </div>
+
           </div>
         </div>
       </div>
