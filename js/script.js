@@ -3,8 +3,16 @@ window.onbeforeprint = function() {
   basicInfo.classList.remove("is-three-quarters");
   basicInfo.classList.add("is-full");
 
-  var profile = document.getElementById("profilePicture")
-  profile.style.display = 'none';
+  var experience = document.getElementById("experience");
+  experience.classList.remove("is-two-thirds");
+  experience.classList.add("is-full");
+
+  var grey = document.getElementById("grey");
+  var main = document.getElementById("main");
+
+  grey.classList.remove("column");
+  grey.classList.add("columns");
+  main.appendChild(grey);
 };
 
 window.onafterprint = function() {
@@ -12,6 +20,15 @@ window.onafterprint = function() {
   basicInfo.classList.remove("is-full");
   basicInfo.classList.add("is-three-quarters");
 
-  var profile = document.getElementById("profilePicture")
-  profile.style.display = 'block';
+  var experience = document.getElementById("experience");
+  experience.classList.remove("is-full");
+  experience.classList.add("is-two-thirds");
+
+  var grey = document.getElementById("grey");
+  grey.classList.remove("columns");
+  grey.classList.add("column");
+
+  experience.parentNode.insertBefore(grey, experience.nextSibling);
+
+  //TODO back to right
 };

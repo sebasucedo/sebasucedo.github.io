@@ -7,11 +7,36 @@
   body {
     margin: 0;
     margin-left: 2cm !important;
-    font-size: 12pt;
+    font-size: 10pt;
   }
 
   .column.is-full {
     width: 100% !important;
+  }
+
+  .non-printable {
+    display: none !important;
+  }
+
+  .container-flex {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .container-flex p, li {
+    margin-right: 15px;
+  }
+  
+  .title {
+    margin-bottom: 0 !important;
+  }
+
+  p {
+    line-height: 1.2em;
+  }
+
+  #experience {
+    padding-right: 0;
   }
 }
 
