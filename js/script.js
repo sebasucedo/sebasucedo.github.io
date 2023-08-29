@@ -29,6 +29,4 @@ window.onafterprint = function() {
   grey.classList.add("column");
 
   experience.parentNode.insertBefore(grey, experience.nextSibling);
-
-  //TODO back to right
 };
