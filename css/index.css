@@ -36,3 +36,18 @@ body {
 h1 { 
   font-family: 'Press Start 2P', cursive;
 }
+
+.hover-visible {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.hover-visible:hover {
+  opacity: 1;
+}
+.hover-visible a {
+  color: white;
+  text-decoration: none;
+}
+.hover-visible a:hover {
+  color: white;
+}

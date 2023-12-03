@@ -24,6 +24,11 @@
             <canvas id="pongCanvas" height="400"></canvas>
           </div>
         </div>                   
+        <div x-data="{ hover: false }">
+          <h1 class="hover-visible" @mouseenter="hover = true" @mouseleave="hover = false">
+            <a href="/cv">CV</a>
+          </h1>
+        </div>
       </div>
     </section>
   </body>
