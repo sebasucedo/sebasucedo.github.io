@@ -8,6 +8,10 @@
     margin-left: 2cm;
   }
 
+  .no-page-break {
+    page-break-inside: avoid;
+  }
+  
   body {
     margin: 0;
     font-size: 10pt;
