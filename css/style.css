@@ -1,12 +1,15 @@
-@page {
-  size: A4;
-  margin: 2cm;
-}
 
 @media print {
+  @page {
+    size: A4;
+    margin-top: 1cm;
+    margin-right: 1cm;
+    margin-bottom: 1cm;
+    margin-left: 2cm;
+  }
+
   body {
     margin: 0;
-    margin-left: 2cm !important;
     font-size: 10pt;
   }
 
@@ -24,7 +27,7 @@
   }
   
   .container-flex p, li {
-    margin-right: 15px;
+    margin-right: 10px;
   }
   
   .title {
@@ -49,7 +52,7 @@
   background-size: cover;
   background-position: center;
   border-radius: 50%;
-  position: relative;
+  width: 100%;
   padding-top: 100%;
 }
 
